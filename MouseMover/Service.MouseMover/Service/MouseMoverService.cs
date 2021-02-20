@@ -29,7 +29,7 @@ namespace LearningServices.Service.MouseMover.Service
     {
       _logger.LogInformation(MouseMoverLoggingEvents.MouseMover_TimerCreated, "Creating long running mouse mover task");
 
-      _timer = new Timer(BeginMouseMoving!, null, TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(_mouseSettings.IntervalInMinutes));
+      _timer = new Timer(BeginMouseMoving!, null, TimeSpan.FromSeconds(1), TimeSpan.FromMinutes(_mouseSettings.IntervalInMinutes));
 
       return Task.CompletedTask;
     }
