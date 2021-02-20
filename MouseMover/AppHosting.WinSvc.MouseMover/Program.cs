@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging.EventLog;
 using Microsoft.Extensions.Configuration;
 using NLog.Web;
 using Microsoft.Extensions.DependencyInjection;
+using LearningServices.Service.MouseMover.Extensions;
 
 namespace LearningServices.AppHosting.WinSvc.MouseMover
 {
@@ -34,7 +35,7 @@ namespace LearningServices.AppHosting.WinSvc.MouseMover
       Host.CreateDefaultBuilder()
           .ConfigureServices((hostContext, services) =>
           {
-            services.AddHostedService<Worker>();
+            services.AddMouseMoverHostedService(hostContext.Configuration);
           })
           .UseWindowsService()
           .ConfigureLogging((hostBuilderContext, logging) =>

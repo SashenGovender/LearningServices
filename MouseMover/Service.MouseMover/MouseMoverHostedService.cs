@@ -1,4 +1,5 @@
 ﻿using LearningServices.Service.MouseMover.Observability;
+using LearningServices.Service.MouseMover.Service;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
@@ -7,18 +8,21 @@ using System.Threading.Tasks;
 
 namespace LearningServices.Service.MouseMover
 {
-  public class MouseMover : IHostedService
+  public class MouseMoverHostedService : IHostedService
   {
-    private readonly ILogger<MouseMover> _logger;
+    private readonly ILogger<MouseMoverHostedService> _logger;
+    private readonly IMouseMoverService _mouseMover;
 
-    public MouseMover(ILogger<MouseMover> logger)
+    public MouseMoverHostedService(ILogger<MouseMoverHostedService> logger, IMouseMoverService mouseMover)
     {
       _logger = logger;
+      _mouseMover = mouseMover;
     }
 
     public Task StartAsync(CancellationToken cancellationToken)
     {
       _logger.LogInformation(MouseMoverLoggingEvents.HostedService_Start, "Starting Mouse Mover hosted Service");
+      _mouseMover.Start();
 
       return Task.CompletedTask;
     }
@@ -26,6 +30,7 @@ namespace LearningServices.Service.MouseMover
     public Task StopAsync(CancellationToken cancellationToken)
     {
       _logger.LogInformation(MouseMoverLoggingEvents.HostedService_Stop, "Stopping Mouse Mover hosted Service");
+      _mouseMover.StopAsync(cancellationToken);
 
       return Task.CompletedTask;
     }
