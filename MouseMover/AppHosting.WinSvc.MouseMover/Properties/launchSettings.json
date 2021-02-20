@@ -1,0 +1,10 @@
+﻿{
+  "profiles": {
+    "AppHosting.WinSvc.MouseMover": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

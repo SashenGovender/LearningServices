@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppHosting.WinSvc.MouseMover", "MouseMover\AppHosting.WinSvc.MouseMover\AppHosting.WinSvc.MouseMover.csproj", "{621FF518-1E47-4857-8EE4-6B9A34F1486E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service.MouseMover", "MouseMover\Service.MouseMover\Service.MouseMover.csproj", "{8D92A44B-A750-4382-8F8D-E0F2FC8515AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service.MouseMover.Tests", "MouseMover\Service.MouseMover.Tests\Service.MouseMover.Tests.csproj", "{518D6298-3615-4914-80B3-AE64492AC097}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MouseMover", "MouseMover", "{F17DBC8B-D51C-4328-979F-B5367F0ABDF6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{621FF518-1E47-4857-8EE4-6B9A34F1486E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{621FF518-1E47-4857-8EE4-6B9A34F1486E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{621FF518-1E47-4857-8EE4-6B9A34F1486E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{621FF518-1E47-4857-8EE4-6B9A34F1486E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D92A44B-A750-4382-8F8D-E0F2FC8515AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D92A44B-A750-4382-8F8D-E0F2FC8515AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D92A44B-A750-4382-8F8D-E0F2FC8515AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D92A44B-A750-4382-8F8D-E0F2FC8515AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{518D6298-3615-4914-80B3-AE64492AC097}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{518D6298-3615-4914-80B3-AE64492AC097}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{518D6298-3615-4914-80B3-AE64492AC097}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{518D6298-3615-4914-80B3-AE64492AC097}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{621FF518-1E47-4857-8EE4-6B9A34F1486E} = {F17DBC8B-D51C-4328-979F-B5367F0ABDF6}
+		{8D92A44B-A750-4382-8F8D-E0F2FC8515AD} = {F17DBC8B-D51C-4328-979F-B5367F0ABDF6}
+		{518D6298-3615-4914-80B3-AE64492AC097} = {F17DBC8B-D51C-4328-979F-B5367F0ABDF6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4A5117F1-38CF-4EE4-A374-B2B62DF97857}
+	EndGlobalSection
+EndGlobal
