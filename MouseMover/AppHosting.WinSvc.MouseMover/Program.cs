@@ -6,7 +6,7 @@ using Microsoft.Extensions.Configuration;
 using NLog.Web;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace AppHosting.WinSvc.MouseMover
+namespace LearningServices.AppHosting.WinSvc.MouseMover
 {
   public class Program
   {

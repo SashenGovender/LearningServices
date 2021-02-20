@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace AppHosting.WinSvc.MouseMover
+namespace LearningServices.AppHosting.WinSvc.MouseMover
 {
   public class Worker : BackgroundService
   {

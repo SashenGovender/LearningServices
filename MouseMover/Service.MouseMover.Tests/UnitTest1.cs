@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace Service.MouseMover.Tests
+namespace LearningServices.Service.MouseMover.Tests
 {
   public class Tests
   {

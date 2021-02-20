@@ -1,10 +1,11 @@
-﻿using Microsoft.Extensions.Hosting;
+﻿using LearningServices.Service.MouseMover.Observability;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Service.MouseMover
+namespace LearningServices.Service.MouseMover
 {
   public class MouseMover : IHostedService
   {
@@ -17,12 +18,16 @@ namespace Service.MouseMover
 
     public Task StartAsync(CancellationToken cancellationToken)
     {
-      throw new NotImplementedException();
+      _logger.LogInformation(MouseMoverLoggingEvents.HostedService_Start, "Starting Mouse Mover hosted Service");
+
+      return Task.CompletedTask;
     }
 
     public Task StopAsync(CancellationToken cancellationToken)
     {
-      throw new NotImplementedException();
+      _logger.LogInformation(MouseMoverLoggingEvents.HostedService_Stop, "Stopping Mouse Mover hosted Service");
+
+      return Task.CompletedTask;
     }
   }
 
