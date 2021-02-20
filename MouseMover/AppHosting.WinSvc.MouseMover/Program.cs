@@ -4,7 +4,6 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.EventLog;
 using Microsoft.Extensions.Configuration;
 using NLog.Web;
-using Microsoft.Extensions.DependencyInjection;
 using LearningServices.Service.MouseMover.Extensions;
 
 namespace LearningServices.AppHosting.WinSvc.MouseMover
@@ -17,7 +16,7 @@ namespace LearningServices.AppHosting.WinSvc.MouseMover
       var logger = NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
       try
       {
-        CreateHostBuilder(args).Build().RunAsync();
+        CreateHostBuilder(args).Build().Run();
       }
       catch (Exception exception)
       {
@@ -26,7 +25,6 @@ namespace LearningServices.AppHosting.WinSvc.MouseMover
       }
       finally
       {
-        // Ensure to flush and stop internal timers/threads before application-exit (Avoid segmentation fault on Linux)
         NLog.LogManager.Shutdown();
       }
     }

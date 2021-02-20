@@ -1,9 +1,7 @@
-﻿using LearningServices.Service.MouseMover.Service;
+﻿using LearningServices.Service.MouseMover.Models;
+using LearningServices.Service.MouseMover.Service;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace LearningServices.Service.MouseMover.Extensions
 {
@@ -11,9 +9,12 @@ namespace LearningServices.Service.MouseMover.Extensions
   {
     public static IServiceCollection AddMouseMoverHostedService(this IServiceCollection services, IConfiguration configuration)
     {
-      services.AddSingleton<IMouseMoverService, MouseMoverService>();
+      services.Configure<MouseSettingsOptions>(options => configuration.GetSection("MouseSettings").Bind(options));
+
+      services.AddTransient<IMouseMoverService, MouseMoverService>();
 
       services.AddHostedService<MouseMoverHostedService>();
+
       return services;
     }
   }
